@@ -9,4 +9,4 @@ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLor
 Graduated from high school with <a href="/assets/grades.jpeg">really good grades</a>. Now serving the nation. Based in Singapore.
 
 Site is extremely work in progress!
-<img height=200 src="/assets/spinnyDyck.gif"/>
+<img height=200 src="/assets/spinnyDyck.gif">
