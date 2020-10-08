@@ -16,6 +16,7 @@ You can reach me at <a href="mailto:boonsuan1@gmail.com">boonsuan1@gmail.com</a>
 <b>This site is extremely work in progress, and \\
 probably will be updated erratically if at all.</b>
 
+I'll also write posts now and then on my <a href="/blog/">blog</a>.
 
 _Oh! If only someone would give me time, time, time_ \\
 _to do everything properly,_ \\
