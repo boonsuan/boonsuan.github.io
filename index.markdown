@@ -11,7 +11,8 @@ with <a href="/assets/grades.jpeg">really good grades</a>. I am currently
 serving the nation, and I do mathematics in my free time. 
 You can reach me at <a href="mailto:boonsuan1@gmail.com">boonsuan1@gmail.com</a>.
 
-<img height=200 src="/assets/spinnyDyck.gif" align="left"/>
+<img height=300 src="/assets/spinnyDyck.gif" align="left"/>
+
 <b>This site is extremely work in progress, and \\
 probably will be updated erratically if at all.</b>
 
