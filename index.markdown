@@ -10,3 +10,9 @@ My name is Ho Boon Suan, and I graduated from one of Singapore's top high school
 
 Site is extremely work in progress!
 <img height=200 src="/assets/spinnyDyck.gif">
+
+Oh! If only someone would give me time, time, time to do everything properly,
+to read everything at my own tempo,
+to take it apart and put it together again.
+
+— KARL BARTH (1922)
