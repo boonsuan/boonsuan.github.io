@@ -1,0 +1,12 @@
+title: ho boon suan
+# email: 
+description: >-
+  baller
+baseurl: "" 
+url: "" 
+permalink: /blog/:categories/:year/:month/:day/:title.html
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
