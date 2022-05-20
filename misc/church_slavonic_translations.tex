@@ -1,0 +1,112 @@
+% A simple XeLaTeX template for typesetting Church Slavonic texts with their
+% English translations paragraph by paragraph, using the Church Slavonic,
+% Polyglossia, and Paracol packages.
+% Made for my friend Ben.
+
+\documentclass[a4paper]{article}
+\thispagestyle{empty} % suppress page numbers
+
+\usepackage{polyglossia}
+   \setmainlanguage{english}
+   \setotherlanguage{churchslavonic}
+
+\setromanfont{Garamond}
+\newfontfamily\churchslavonicfont[Script=Cyrillic, Ligatures=TeX, HyphenChar=_]
+{PonomarUnicode.otf} 
+% Church Slavonic fonts provided in churchslavonic package:
+% {Fedorovsk, Indiction, Menaion, Monomakh, Ponomar}Unicode.otf
+
+\usepackage{churchslavonic}
+
+\setlength{\parskip}{0.5\baselineskip} % paragraph vertical space
+\setlength{\parindent}{0pt} % no paragraph indents
+
+% no hyphenation:
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\raggedright % rather than justified
+
+\usepackage[margin=0.8in]{geometry} % page margins
+\usepackage{paracol} % parallel columns
+\usepackage{xcolor} % text and page colors
+
+\newcounter{languageSwitch}
+\newcommand\switch{
+   \stepcounter{languageSwitch}
+   \ifodd\value{languageSwitch}
+      \switchcolumn
+      \selectlanguage{english}
+   \else
+      \switchcolumn*
+      \selectlanguage{churchslavonic}
+   \fi
+   \stepcounter{languageSwitch}
+}
+
+\begin{document}
+\pagecolor[HTML]{FFFEE2} % cream background
+\setlength{\columnsep}{20pt} % separation between columns
+\begin{paracol}{2} % begin two parallel columns
+\selectlanguage{churchslavonic}
+мѣсѧца дєкѧбр҄ја иг въ навєчєриѥ рождьства хрьстова єванћєлиѥ отъ лѹкъі глава 
+в въ оно врѣмѧ изідє заповѣдь отъ кєсарѣ авгоста напісаті в҄сѫ вьсєлєнѫѭ
+
+\switch
+And it came to pass in those days, that there went out a decree from Caesar 
+Augustus, that all the world should be taxed.
+
+\switch
+сє напісаніє пръвоє бъістъ владѫщѹ сѹрієѭ и кѵрінієѭ
+
+\switch
+(And this taxing was first made when Cyrenius was governor of Syria.)
+
+\switch
+и идѣахѫ вьсі напісатъ сѧ кьждо въ свои градъ
+
+\switch
+And all went up to be taxed, every one in his own city.
+
+\switch
+вьзідє жє иосіфь отъ галілєѧ и града назарєтьска вь июдєѭ вь градъ давъідовъ 
+іжє наріцаєтъ сѧ віѳлєємь занє бѣашє отъ домѹ и отьчьствіѣ давъідова
+
+\switch
+And Joseph also went up from Galilee, out of the city of Nazareth, 
+into Judaea, unto the city of David, which is called Bethlehem; 
+(because he was of the house and lineage of David:)
+
+\switch
+напісатъ сѧ съ марієѭ обрѫчєнѫѭ ємѹ жєноѭ сѫштєѭ нєпраздъноѭ
+
+\switch
+To be taxed with Mary his espoused wife, being great with child.
+
+\switch
+бъістъ жє єгда бъістє тѹ исплънишѧ сѧ дєниє да родітъ
+
+\switch
+And so it was, that, while they were there, the days were accomplished 
+that she should be delivered.
+
+\switch
+и роді съінъ свои пръвѣнєць и обитъі и и положі и въ ѣслєхъ занє нє бѣ 
+има мѣста въ обитѣли
+
+\switch
+And she brought forth her firstborn son, and wrapped him in swaddling clothes, 
+and laid him in a manger; because there was no room for them in the inn.
+
+\switch
+и пастъирі бѣахѫ въ тоиждє ст҄ранѣ бъдѧщє и 
+стрѣгѫщє стражѫ нощьнѫѭ о стадѣ своємъ
+
+\switch
+And there were in the same country shepherds abiding in the field, 
+keeping watch over their flock by night.
+
+\end{paracol}
+\end{document}
