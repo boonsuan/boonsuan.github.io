@@ -9,133 +9,33 @@
 
 <url>
   <loc>https://boonsuan.github.io/</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
+  <lastmod>2023-11-08T11:48:30+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://boonsuan.github.io/misc/projects.html</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
+  <loc>https://boonsuan.github.io/masyu.pdf</loc>
+  <lastmod>2023-11-08T11:48:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://boonsuan.github.io/misc/245a.pdf</loc>
+  <lastmod>2023-11-08T11:48:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://boonsuan.github.io/misc/245b.pdf</loc>
+  <lastmod>2023-11-08T11:48:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://boonsuan.github.io/misc/cauchy_binet.pdf</loc>
+  <lastmod>2023-11-08T11:48:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://boonsuan.github.io/misc/two_queens.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
+  <lastmod>2023-11-08T11:48:30+00:00</lastmod>
   <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/strassen_yuval.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/tv-schedules.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/masyu.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/mig_magazine.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/tao-ramsey.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/yuelin_bounded.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/diestelchap1.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/august%202020,%20scattered%20thoughts.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/cmath185.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/bundle%20stuff.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/covariant_intuition.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/derivations.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/polynomial_growth.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/interestinglimit.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/covector%20fields.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/cs-masterclass.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/berman.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/church_slavonic_translations.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/measure_solutions.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/245b.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/misc/complexity.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/expository/cauchy_binet.pdf</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://boonsuan.github.io/index.html</loc>
-  <lastmod>2023-03-19T03:15:41+00:00</lastmod>
-  <priority>0.64</priority>
 </url>
 
 
