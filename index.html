@@ -2,10 +2,54 @@
 <html lang="en">
 <head>
 <title>ho boon suan</title>
-<meta name="description" content="Undergrad at the National University of Singapore, with an interest in combinatorics.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://boonsuan.github.io/" />
 <style>
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #555; /* dotted underline */
+    cursor: help;
+  }
+  .tooltip .tooltip-text {
+    visibility: hidden;
+    width: 180px;
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* show above */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* arrow points down */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+  }
+  .tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  .tooltip .tooltip-icon {
+    display: none;
+    margin-left: 4px;
+    color: #555;
+    font-weight: bold;
+  }
+  .tooltip:hover .tooltip-icon {
+    display: inline;
+  }
   body {
     font-size: 24px;
     font-family: monospace;
@@ -16,61 +60,54 @@
   }
 }
 </style>
+  <script>
+    // https://codepen.io/sarahwfox/pen/pNrYGb
+    // minified with https://www.toptal.com/developers/javascript-minifier
+var colour="random",sparkles=150,x=ox=400,y=oy=300,swide=800,shigh=600,sleft=sdown=0,tiny=[],star=[],starv=[],starx=[],stary=[],tinyx=[],tinyy=[],tinyv=[];if(colours=["#ff0000","#00ff00","#ffffff","#ff00ff","#ffa500","#ffff00","#00ff00","#ffffff","ff00ff"],n=10,y=0,x=0,n6=document.getElementById&&!document.all,ns=document.layers,ie=document.all,d=ns||ie?"document.":'document.getElementById("',a=ns||n6?"":"all.",n6r=n6?'")':"",s=ns?"":".style",ns)for(i=0;i<n;i++)document.write('<layer name="dots'+i+'" top=0 left=0 width='+i/2+" height="+i/2+" bgcolor=#ff0000></layer>");if(ie&&document.write('<div id="con" style="position:absolute;top:0px;left:0px"><div style="position:relative">'),ie||n6)for(i=0;i<n;i++)document.write('<div id="dots'+i+'" style="position:absolute;top:0px;left:0px;width:'+i/2+"px;height:"+i/2+"px;background:#ff0000;font-size:"+i/2+';pointer-events:none;"></div>');function Mouse(t){y=ns||n6?t.pageY+4-window.pageYOffset:event.y+4,x=ns||n6?t.pageX+1:event.x+1}function animate(){for(o=ns||n6?window.pageYOffset:0,ie&&(con.style.top=document.body.scrollTop+"px"),i=0;i<n;i++){var temp1=eval(d+a+"dots"+i+n6r+s);if(randcolours=colours[Math.floor(Math.random()*colours.length)],ns?temp1.bgColor=randcolours:temp1.background=randcolours,i<n-1){var temp2=eval(d+a+"dots"+(i+1)+n6r+s);temp1.top=parseInt(temp2.top)+"px",temp1.left=parseInt(temp2.left)+"px"}else temp1.top=y+o+"px",temp1.left=x+"px"}setTimeout("animate()",10)}function sparkle(){var t;if(Math.abs(x-ox)>1||Math.abs(y-oy)>1){for(t=0,ox=x,oy=y;t<sparkles;t++)if(!starv[t]){star[t].style.left=(starx[t]=x)+"px",star[t].style.top=(stary[t]=y+1)+"px",star[t].style.clip="rect(0px, 5px, 5px, 0px)",star[t].childNodes[0].style.backgroundColor=star[t].childNodes[1].style.backgroundColor="random"==colour?newColour():colour,star[t].style.visibility="visible",starv[t]=50;break}}for(t=0;t<sparkles;t++)starv[t]&&update_star(t),tinyv[t]&&update_tiny(t);setTimeout("sparkle()",40)}function update_star(t){if(25==--starv[t]&&(star[t].style.clip="rect(1px, 4px, 4px, 1px)"),starv[t]){if(stary[t]+=1+3*Math.random(),starx[t]+=(t%5-2)/5,stary[t]<shigh+sdown)star[t].style.top=stary[t]+"px",star[t].style.left=starx[t]+"px";else{star[t].style.visibility="hidden",starv[t]=0;return}}else tinyv[t]=50,tiny[t].style.top=(tinyy[t]=stary[t])+"px",tiny[t].style.left=(tinyx[t]=starx[t])+"px",tiny[t].style.width="2px",tiny[t].style.height="2px",tiny[t].style.backgroundColor=star[t].childNodes[0].style.backgroundColor,star[t].style.visibility="hidden",tiny[t].style.visibility="visible"}function update_tiny(t){if(25==--tinyv[t]&&(tiny[t].style.width="1px",tiny[t].style.height="1px"),tinyv[t]){if(tinyy[t]+=1+3*Math.random(),tinyx[t]+=(t%5-2)/5,tinyy[t]<shigh+sdown)tiny[t].style.top=tinyy[t]+"px",tiny[t].style.left=tinyx[t]+"px";else{tiny[t].style.visibility="hidden",tinyv[t]=0;return}}else tiny[t].style.visibility="hidden"}function mouse(t){t?(y=t.pageY,x=t.pageX):(set_scroll(),y=event.y+sdown,x=event.x+sleft)}function set_scroll(){"number"==typeof self.pageYOffset?(sdown=self.pageYOffset,sleft=self.pageXOffset):document.body&&(document.body.scrollTop||document.body.scrollLeft)?(sdown=document.body.scrollTop,sleft=document.body.scrollLeft):document.documentElement&&(document.documentElement.scrollTop||document.documentElement.scrollLeft)?(sleft=document.documentElement.scrollLeft,sdown=document.documentElement.scrollTop):(sdown=0,sleft=0)}function set_width(){var t=999999,e=999999;document.documentElement&&document.documentElement.clientWidth&&(document.documentElement.clientWidth>0&&(t=document.documentElement.clientWidth),document.documentElement.clientHeight>0&&(e=document.documentElement.clientHeight)),"number"==typeof self.innerWidth&&self.innerWidth&&(self.innerWidth>0&&self.innerWidth<t&&(t=self.innerWidth),self.innerHeight>0&&self.innerHeight<e&&(e=self.innerHeight)),document.body.clientWidth&&(document.body.clientWidth>0&&document.body.clientWidth<t&&(t=document.body.clientWidth),document.body.clientHeight>0&&document.body.clientHeight<e&&(e=document.body.clientHeight)),(999999==t||999999==e)&&(t=800,e=600),swide=t,shigh=e}function createDiv(t,e){var l=document.createElement("div");return l.style.position="absolute",l.style.height=t+"px",l.style.width=e+"px",l.style.overflow="hidden",l.style.pointerEvents="none",l}function newColour(){var t=[];return t[0]=255,t[1]=Math.floor(256*Math.random()),t[2]=Math.floor(Math.random()*(256-t[1]/2)),t.sort(function(){return .5-Math.random()}),"rgb("+t[0]+", "+t[1]+", "+t[2]+")"}ie&&document.write("</div></div>"),(ns||n6)&&window.captureEvents(Event.MOUSEMOVE),ns?window.onMouseMove=Mouse:document.onmousemove=Mouse,animate(),window.onload=function(){if(document.getElementById){for(var t,e,l,r,t=0;t<sparkles;t++){var e=createDiv(3,3);e.style.visibility="hidden",e.style.zIndex="999",document.body.appendChild(tiny[t]=e),starv[t]=0,tinyv[t]=0;var e=createDiv(5,5);e.style.backgroundColor="transparent",e.style.visibility="hidden",e.style.zIndex="999";var l=createDiv(1,5),r=createDiv(5,1);e.appendChild(l),e.appendChild(r),l.style.top="2px",l.style.left="0px",r.style.top="0px",r.style.left="2px",document.body.appendChild(star[t]=e)}set_width(),sparkle()}},document.onmousemove=mouse,window.onscroll=set_scroll,window.onresize=set_width;
+</script>
 </head>
 <body style="background-color: white; color: black;">
 <h1>ho boon suan</h1><hr>
-<p>I am an undergraduate student at the 
-National University of Singapore.</p>
-<p>Interested in combinatorics.</p>
+<p>currently i am playing the role of undergrad at the 
+national university of singapore (NUS) — you can reach me at hbs@u.nus.edu!</p>
 
-<p>Email: hbs@u.nus.edu — I welcome any questions/comments about my work.</p>
-
-<p>Papers:</p> 
-
-<p><a href="https://arxiv.org/abs/2310.03356">Two product formulas for counting successive vertex orderings</a>, arXiv preprint (2023).</p>
-
-<p><a href="https://arxiv.org/abs/1903.03821">Equality cases for a bound on the chromatic number</a>, with Joel Tan Junyao and Zhang Xiaorui, arXiv preprint (2019).</p>
-
-<hr>
-
-<p>Miscellany:</p>
-
-<p>Ranked 7th in Don Knuth's 
-<a href="https://www-cs-faculty.stanford.edu/~knuth/boss.html">Bank of San Serriffe</a>,
-which tracks the number of bugs people have found in Knuth's work since 2006.
+<p>
+some friends:
+<a href="https://tfmsadhith.github.io/">sanjay</a>, 
+<a href="https://saddle196883.github.io/personalpage/">timo</a>, 
+<a href="https://greysome.github.io/">wyan</a> 
 </p>
 
-<p>My name shows up in exercises 7.2.2.1–425 and 7.2.2.3–212 of <em>The Art of Computer Programming</em>,
-for <a href="masyu.pdf">this Masyu puzzle solution</a> and <a href="https://www.youtube.com/watch?v=KelZOGPr3Zw">this graph animation</a> respectively.
-</p>
-
-<p>Sometimes, I post to 
-<a href="https://mathoverflow.net/users/118745/ho-boon-suan">MathOverflow</a> and
-<a href="https://math.stackexchange.com/users/436996/ho-boon-suan">Math StackExchange</a>,
-though I mostly just post comments. <br> <em>Selected answers:</em> 
-<a href="https://math.stackexchange.com/a/4632043/436996">Gosper's golden ratio identity</a>,
-<a href="https://mathoverflow.net/a/456481/118745">Stirling sum positivity</a>, and
-<a href="https://mathoverflow.net/a/424730/118745">graceful windmill labelings</a>.
-
-</p>
-
-<p>Sometimes, I post comments on the 
-<a href="https://oeis.org/">On-Line Encyclopedia of Integer Sequences (OEIS)</a>;
-see for example sequences <a href="https://oeis.org/A275888">A275888</a> and
-<a href="https://oeis.org/A001581">A001581</a>.
-</p>
-
-<p>Here are some things I've written in the past:
+<p>i write stuff and put it on the internet sometimes:
 <ul>
-  <li><a href="misc/245a.pdf">Selected solutions to UCLA 245A Measure Theory</a> (2021, 44 pages)</li>
-  <li><a href="misc/245b.pdf">Selected solutions to UCLA 245B Real Analysis</a> (2022, 78 pages)</li>
-  <li>Expository note: <a href="misc/cauchy_binet.pdf">The Cauchy–Binet formula</a> (2021, 3 pages)</li>
-  <li>Expository note: <a href="misc/two_queens.pdf">Two non-attacking queens</a> (2022, 1 page)</li>
-  <li><a href="misc/dyck_cycle.gif">Tiny animation of a Dyck cycle</a></li>
-  <li><a href="orderings.nb">Mathematica notebook</a> that supplements my paper <a href="https://arxiv.org/abs/2310.03356">“Two product formulas…”</a> (2023)</li>
-  <li>Slides from a talk at the NUS combinatorics seminar: <a href="traversals.pdf">How many ways are there to traverse a graph?</a> (09 Oct 2024)</li> 
-  <li>A <a href="misc/modular_multiplication.pdf">note</a> on exercise 3.2.1.1–3 of <em>The Art of Computer Programming</em> (17 Jul 2025)</li>
+  <li><a href="https://arxiv.org/abs/2310.03356">Two product formulas for counting successive vertex orderings</a>, arXiv preprint (2023)</li>
+  <li><a href="https://arxiv.org/abs/1903.03821">Equality cases for a bound on the chromatic number</a>, with Joel Tan Junyao and Zhang Xiaorui, arXiv preprint (2019)</li>
+  <br>
+  <li>a cute <a href="masyu.pdf">set</a> of balanced Masyu puzzles i made with my friend <a href="https://gooeye.github.io/">gabriel</a> (<span class="tooltip"><span class="tooltip-text">The Art of Computer Programming</span>TAOCP</span> volume 4B, exercise 7.2.2.1–425)</li>
+  <li>a Manim <a href="https://youtu.be/KelZOGPr3Zw">animation</a> of a universal graph that contains every four-vertex graph as an induced subgraph (TAOCP volume 4C, exercise 7.2.2.3–212)</li>
+  <br>
+  <li>some <a href="misc/245a.pdf">solutions</a> to Tao's UCLA course 245A Measure Theory (2021, 44 pages)</li>
+  <li>some <a href="misc/245b.pdf">solutions</a> to Tao's 245B Real Analysis (2022, 78 pages)</li>
+  <li>some <a href="gtac_solutions.pdf">solutions</a> to chapter 1 of Yufei Zhao's 2023 book <a href="https://yufeizhao.com/gtacbook/">Graph Theory and Additive Combinatorics</a></li>
+  <br>
+  <li>expository note: <a href="misc/cauchy_binet.pdf">The Cauchy–Binet formula</a> (2021, 3 pages)</li>
+  <li>expository note: <a href="misc/two_queens.pdf">Two non-attacking queens</a> (2022, 1 page)</li>
+  <li>a <a href="misc/modular_multiplication.pdf">note</a> on exercise 3.2.1.1–3 of <em>The Art of Computer Programming</em> (17 Jul 2025)</li>
+  <br>
+  <li>tiny <a href="misc/dyck_cycle.gif">animation</a> of a Dyck cycle</li>
+  <li>Mathematica <a href="orderings.nb">notebook</a> that supplements my paper <a href="https://arxiv.org/abs/2310.03356">"Two product formulas…"</a> (2023)</li>
+  <li>slides from a talk at the NUS combinatorics and graph theory seminar: <a href="traversals.pdf">How many ways are there to traverse a graph?</a> (09 Oct 2024)</li> 
+  
+
 </ul>
+</p>
+
+<p>some books that i love: 
+  Rainer Maria Rilke, <a href="https://stephenmitchellbooks.com/translations-adaptations/letters-to-a-young-poet/"><em>Letters to a Young Poet</em></a> (1903–1908);
+  Jeffrey Kripal, <a href="https://www.goodreads.com/book/show/39795104-the-flip"><em>The Flip</em></a> (2019); 
+  Iain McGilchrist, <a href="https://www.goodreads.com/book/show/58955313-the-matter-with-things"><em>The Matter with Things</em></a> (2021);
+  Adyashanti, <a href="https://www.goodreads.com/book/show/9808992-falling-into-grace"><em>Falling into Grace</em></a> (2013);
+  Paul Kingsnorth, <a href="https://www.paulkingsnorth.net/against-machine"><em>Against the Machine</em></a> (2025)
 </p>
 </body>
 </html>
